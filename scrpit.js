@@ -50,4 +50,4 @@ function relógio(){
     }
 }
 relógio()
-setInterval(relógio, 100) //atualiza a função relógio a cada 0.1 segundos (coloquei 0.1 de tempo para os segundos ficarem mais precisos no site)
+setInterval(relógio, 200) //atualiza a função relógio a cada 0.2 segundos (coloquei 0.2 de tempo para os segundos ficarem mais precisos no site)
