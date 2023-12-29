@@ -21,6 +21,8 @@ function relógio(){
     
     if (horas >= 0 && horas < 6){ //cumprimentar dependendo da hora e mostrar uma imagem condizente
         mostrarCumprimento.innerHTML = 'Boa madrugada! <i class="fa-solid fa-moon" style="color: gray;"></i>'
+        document.body.style.backgroundColor = '#021f55'
+        document.querySelector('footer').style.color = 'white'
         foto.src = 'images/madrugada.jpg'
         if (divImg.firstChild){
             divImg.removeChild(divImg.firstChild)
@@ -28,6 +30,7 @@ function relógio(){
         divImg.appendChild(foto)
     }else if(horas < 12){
         mostrarCumprimento.innerHTML = 'Bom dia! <i class="fa-solid fa-sun" style="color: orange;"></i>'
+        document.body.style.backgroundColor = '#cc8b00'
         foto.src = 'images/manhã.jpg'
         if (divImg.firstChild){
             divImg.removeChild(divImg.firstChild)
@@ -35,6 +38,7 @@ function relógio(){
         divImg.appendChild(foto)
     }else if(horas < 18){
         mostrarCumprimento.innerHTML = 'Boa Tarde! <i class="fa-solid fa-sun" style="color: orange;"></i>'
+        document.body.style.backgroundColor = '#006b12'
         foto.src = 'images/tarde.jpg'
         if (divImg.firstChild){
             divImg.removeChild(divImg.firstChild)
@@ -42,6 +46,8 @@ function relógio(){
         divImg.appendChild(foto)
     }else{
         mostrarCumprimento.innerHTML = 'Boa Noite! <i class="fa-solid fa-moon" style="color: gray;"></i>'
+        document.body.style.backgroundColor = 'black'
+        document.querySelector('footer').style.color = 'white'
         foto.src = 'images/noite.jpg'
         if (divImg.firstChild){
             divImg.removeChild(divImg.firstChild)
@@ -50,4 +56,4 @@ function relógio(){
     }
 }
 relógio()
-setInterval(relógio, 200) //atualiza a função relógio a cada 0.2 segundos (coloquei 0.2 de tempo para os segundos ficarem mais precisos no site)
+setInterval(relógio, 200) //atualiza a função relógio a cada 0.2 segundos (coloquei 0.2 de tempo para os segundos ficarem mais precisos)
