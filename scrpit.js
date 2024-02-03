@@ -31,6 +31,7 @@ function relógio(){
     }else if(horas < 12){
         mostrarCumprimento.innerHTML = 'Bom dia! <i class="fa-solid fa-sun" style="color: orange;"></i>'
         document.body.style.backgroundColor = '#cc8b00'
+        document.querySelector('footer').style.color = 'black'
         foto.src = 'images/manhã.jpg'
         if (divImg.firstChild){
             divImg.removeChild(divImg.firstChild)
