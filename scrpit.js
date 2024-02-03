@@ -37,7 +37,7 @@ function relógio(){
             divImg.removeChild(divImg.firstChild)
         }
         divImg.appendChild(foto)
-    }else if(horas < 18){
+    }else if(horas < 19){
         mostrarCumprimento.innerHTML = 'Boa Tarde! <i class="fa-solid fa-sun" style="color: orange;"></i>'
         document.body.style.backgroundColor = '#006b12'
         foto.src = 'images/tarde.jpg'
