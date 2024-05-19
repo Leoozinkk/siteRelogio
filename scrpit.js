@@ -5,12 +5,20 @@ function relógio(){
     
     var mostrarHorario = document.querySelector('p#horario') //lugar selecionado para aparecer o horario 
     
-    if(horas == 1){ //mostrar os valores dos horários no site e alternar para singular quando o valor for "1" (para evitar estar escrito: "1 horas/minutos/segundos")
+    if(horas == 1 && minutos != 1 && segundos != 1){ //mostrar os valores dos horários no site e alternar para singular quando o valor for "1" (para evitar estar escrito: "1 horas/minutos/segundos")
         mostrarHorario.innerHTML = `${horas} hora, ${minutos} minutos e ${segundos} segundos`
-    }else if(minutos == 1){
+    }else if(horas != 1 && minutos == 1 && segundos != 1){
         mostrarHorario.innerHTML = `${horas} horas, ${minutos} minuto e ${segundos} segundos`
-    }else if(segundos == 1){
+    }else if(horas != 1 && minutos != 1 && segundos == 1){
         mostrarHorario.innerHTML = `${horas} horas, ${minutos} minutos e ${segundos} segundo`
+    }else if(horas != 1 && minutos == 1 && segundos == 1){
+        mostrarHorario.innerHTML = `${horas} horas, ${minutos} minuto e ${segundos} segundo`
+    }else if(horas == 1 && minutos != 1 && segundos == 1){
+        mostrarHorario.innerHTML = `${horas} hora, ${minutos} minutos e ${segundos} segundo`
+    }else if(horas == 1 && minutos == 1 && segundos != 1){
+        mostrarHorario.innerHTML = `${horas} hora, ${minutos} minuto e ${segundos} segundos`
+    }else if(horas == 1 && minutos == 1 && segundos == 1){
+        mostrarHorario.innerHTML = `${horas} hora, ${minutos} minuto e ${segundos} segundo`
     }else{
         mostrarHorario.innerHTML = `${horas} horas, ${minutos} minutos e ${segundos} segundos`
     }
